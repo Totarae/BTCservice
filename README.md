@@ -75,11 +75,11 @@ Response
 [
     {
         "dateTime": "2020-07-19T10:00:00+02:00",
-        "amount": 141.01999999999998
+        "amount": 141.02
     },
     {
         "dateTime": "2020-07-19T03:00:00+02:00",
-        "amount": 146.01999999999998
+        "amount": 146.02
     },
     {
         "dateTime": "2020-07-01T23:00:00+02:00",
@@ -119,7 +119,7 @@ http://localhost:8080/swagger-ui.html - Swagger Description of REST methods
 + application.properties has timezone overconfiguration if docker ignores yaml config for db
 + Record model reused for "/records" answer. That's why I used custom getter with Json annnotations.
 + "/records" implemented with Pageable interface for future extensibility
-+ Paging metadata removed for clean response 
++ Paging metadata removed for clean response
     ```
     Page<Record> temp = historyRepository.findByDataFrame(dataframe.getStartDatetime(),dataframe.getEndDatetime(), pageable);
     return temp.getContent();
