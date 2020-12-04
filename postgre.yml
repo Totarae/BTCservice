@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+
+  db:    
+    image: postgres #use latest image
+    ports:
+     - 5432:5432 #enable external ports
+    restart: always
+    environment:
+     - TZ=UTC
+     - PGTZ=UTC
+     - POSTGRES_PASSWORD=magic_passwd #superuser password
+     - POSTGRES_USER=unicorn_user #superuser name
+     - POSTGRES_DB=btcdb
+    volumes: 
+     - database_data:/var/lib/postgresql/data #persist data even if container shuts down
+
+volumes:
+  database_data:
