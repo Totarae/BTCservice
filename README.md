@@ -125,3 +125,4 @@ http://localhost:8080/swagger-ui.html - Swagger Description of REST methods
     return temp.getContent();
     ```
 + Date frame validation is implemented in RestController for future more datailed customization purposes.
++ TODO: rework native query for optimization
