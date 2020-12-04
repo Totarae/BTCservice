@@ -124,3 +124,4 @@ http://localhost:8080/swagger-ui.html - Swagger Description of REST methods
     Page<Record> temp = historyRepository.findByDataFrame(dataframe.getStartDatetime(),dataframe.getEndDatetime(), pageable);
     return temp.getContent();
     ```
++ Date frame validation is implemented in RestController for future more datailed customization purposes.
